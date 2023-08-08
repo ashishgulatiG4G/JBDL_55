@@ -1,0 +1,48 @@
+DIFFERENT TYPE OF ENVIRONMENT ->
+
+1. LOCAL ENVIRONMENT
+2. STAGING ENVIRONMENT (QA)
+3. PRE PRODUCT ENVIRONMENT
+4. PRODUCTION ENVIRONMENT (CUSTOMERS)
+
+
+        // 1. Debugging
+        // 2. Performance Testing
+        // 3. Analytics -> Swiggy => Betting feature => Multiple features
+
+
+DIFFERENT TYPE OF LOGS ->
+
+1. TRACE -> DETAILED INFO ABOUT APP BEHAVIOURS, METHOD ENTRY AND EXIT PT    -> Lowest severity
+2. DEBUG -> DURING DEVELOPMENT AND TESTING
+3. INFO ->
+4. WARN -> There are some issues in the code but they are casuing any problem right now but they will, in future => prevent errors
+5. ERROR -> Identify and address issues, Error logs -> stack traces, timestamps, error codes     -> Highest Severity
+
+
+divisor = 0;
+
+if() {
+    //condition
+    divisor = 10
+}
+
+int result = 10/divisor;
+
+
+
+1. Change the default server
+2. Change the port of embedded server => application.properties
+3. Running spring boot application from command line  =>  mvn package && java -jar target/spring-starter-0.0.1-SNAPSHOT.jar
+4. Different Logging levels for different packages =>
+logging.level.org.springframework.boot=INFO
+logging.level.com.example.springstarter=DEBUG
+
+5. Spring profiles
+Feature of spring, it allows to define diff set of configuration for different environments
+
+1. spring.profiles.active=preprod3456789
+2. java -jar target/spring-starter-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
+
+
+Lombok -> Java library that helps reduce boilerplate

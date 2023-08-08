@@ -1,0 +1,71 @@
+1. Maven
+2. Embedded Server (Spring)
+3. Spring Boot and framework
+4. Rest API's
+
+// Client -> Server
+
+
+// Server -> API's (Contract)
+//API -> Application Programming Interface
+
+Architectural Style->
+SOAP - Simple object access protocol
+REST -> Representational State Transfer -> way of accessing web services in a simple way (without any processing)
+
+CRUD ->
+C -> Create
+R -> Read
+U -> Update
+D -> Delete
+
+
+Request Methods
+1. GET -> Generally used for read operations i.e. operations should not change the data on server
+2. POST -> Creating/writing new data
+3. PUT -> Generally used for update operation (Employee data)
+4. DELETE -> Generally used for deleting the data
+5. Patch -> Sending few of the fields (few columns will be modified)
+
+
+
+Server -> Servlet engine -> opening the sockets -> parsing the request (request params) [url] +
+
+
+
+
+PostMan -> act as a client, testing for API's
+
+
+
+
+Persistence -> DBase
+Speed -> Cache (RAM)
+
+
+
+Library Management System
+
+
+
+Any running program is a process ->
+CPU
+RAM -> (64GB)
+ROM(Hard disk) ->
+
+
+// Path Variable / Request param
+
+Request param -> https://localhost:8080/complete/search?name=random
+Path variable -> https://localhost:8080/complete/search?name=random
+
+
+You can't add have 2 api's with same name (in the entire application)
+
+
+REST vs SOAP
+Patch, Put, Delete
+
+
+
+
