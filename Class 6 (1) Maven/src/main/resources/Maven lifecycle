@@ -1,0 +1,10 @@
+
+
+1. Clean -> Deletes the target folder/bytecode
+2. Validate-> Validate the project is correct and all the info is available (pom.xml and src files)
+3. Compile -> Compile the source code of project (won’t be running the test files)
+4. Test -> test the compiled source code using a unit testing framework, and looks for any syntactical issue
+5. Package -> take the compiled code and package it in distributable format (JAR) and put it in target folder
+6. Verify -> verifies whether you have a jar file or not
+7. Install -> install/add the package into local repository (m2), for use as a dependency in some other project
+8. Deploy -> copies the final package and push it to remote repository for sharing with other developers and projects
