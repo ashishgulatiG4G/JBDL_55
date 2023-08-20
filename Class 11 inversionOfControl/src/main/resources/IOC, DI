@@ -1,0 +1,63 @@
+IOC -> Phenomenon by which beans can be created and stored in IOC container
+
+DI -> Retrieval of an already created bean from the IOC container (Dependency Injection)
+
+
+
+ComponentScan ->
+IOC -> Bean Creation -> IOC Container
+
+
+
+2 pillars in SPRING
+
+1. IOC (Creation Of Beans) -> @Component
+2. DI (Retrieval Of Beans) -> @Autowired
+
+
+
+
+Mac
+Laptop -> Hard drive, processor, fan, camera
+
+Samsung, Western Digital
+
+
+    Abstraction ->
+
+
+
+class Laptop {
+    @Autowired
+    Harddrive harddrive;
+
+    @Autowired
+    Processor
+    Fan
+    Camera
+}
+
+@Value
+
+
+
+How to read an annotation??
+
+Annotations -> @Component, @RestController, @ResponseBody
+
+
+
+
+
+
+Annotations like @Autowired enable spring to automatically inject dependencies without manually wiring
+
+Reflections -> it is used to indentify fields annotated with these dependencies and to populate with respective dependencies
+            -> https://www.baeldung.com/java-reflection
+
+
+
+
+
+
+
