@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
+@Component
 public class DbOperation {
 
     private Connection connection = null;
@@ -65,18 +67,15 @@ public class DbOperation {
      * Prepared Statement
      */
 
-    public DbOperation() {
+    public DbOperation(@Value("${db.url}") String url,
+                       @Value("${db.username}") String username,
+                       @Value("${db.password}") String password) {
         try {
-            createConnection();
+            connection = DriverManager.getConnection(url, username, password);
             createEmployeeTable();
         } catch (SQLException e) {
             log.error("Exception in creating the connection");
         }
-    }
-
-    private void createConnection() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/employee_db";
-        connection = DriverManager.getConnection(url, "root", "");
     }
 
     private void createEmployeeTable() {

@@ -14,10 +14,11 @@ import java.util.List;
 @RestController
 public class EmployeeController {
 
+    @Autowired
     private DbOperation dbOperation;
 
     public EmployeeController() {
-        dbOperation = new DbOperation();
+//        dbOperation = new DbOperation();
     }
 
     @PostMapping("/createEmployee")
