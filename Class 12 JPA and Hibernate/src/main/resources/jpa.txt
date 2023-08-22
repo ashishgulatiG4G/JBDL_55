@@ -1,0 +1,55 @@
+-> Connect to any relational DB
+-> IOC + DI
+-> REST API's
+-> Connecting DB to a spring boot project
+
+
+->We were writing queries by ourselves
+
+Spring Data JPA and Hibernate
+
+JPA -> Java/Jakarta Persistence API => Interface which provides end points to interact with a DB
+
+        getAll() -> Select * from <table_name>
+
+
+Hibernate -> ORM -> Object Relational Mapping -> Hibernate, OpenJPA, EclipseLink
+
+
+        Mapping b/w different type of objects =>
+            Java Objects and DB entities/tables
+
+
+
+     spring-boot-started-data-jpa
+
+
+-> Controller -> Service -> RepositoryLayer -> DbOperations
+
+
+DTO -> Data transfer Object -> Request and response POJO
+    Ex - in the posy mapping,
+        ->we don't want to expose entity class schema to the outside world
+        -> we might not want all the fields
+
+    Should be used for req/response only, shouldn;t be passing b/w diff layers
+
+    DTO->Model conversion should happen at controller or service layer
+
+
+
+DAO layer / Repository -> Data Access Object Layer ---> underlying DB
+
+
+Why do we need to use ORM?  (hibernate, openJPA, eclipseLink)
+Manual ORM is difficult and not scalable
+
+That's why we use DAO (@Entity Class)
+
+
+
+
+
+
+
+
