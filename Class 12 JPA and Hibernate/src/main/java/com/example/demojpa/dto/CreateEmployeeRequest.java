@@ -14,6 +14,8 @@ import lombok.*;
 @Builder
 public class CreateEmployeeRequest {
 
+    // TODO - Remove, Server should generate the ID, we will remove it once we know how to generate the ID's
+    // Client shouldn't pass it
     private Integer id;
 
     @NotEmpty
