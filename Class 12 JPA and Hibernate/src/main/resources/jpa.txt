@@ -28,8 +28,8 @@ Hibernate -> ORM -> Object Relational Mapping -> Hibernate, OpenJPA, EclipseLink
 
 
 DTO -> Data transfer Object -> Request and response POJO
-    Ex - in the posy mapping,
-        ->we don't want to expose entity class schema to the outside world
+    Ex - in the post mapping,
+        -> we don't want to expose entity class schema to the outside world
         -> we might not want all the fields
 
     Should be used for req/response only, shouldn;t be passing b/w diff layers

@@ -1,0 +1,12 @@
+DTO -
+    Responsible for communication b/w client and server or 2 services (server)
+    Have the properties required for request and response
+
+
+
+Client  --->            Server
+            Controller    Service   Repository   DB
+    DTO's             Model      Model       Model
+
+
+

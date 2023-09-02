@@ -14,9 +14,9 @@ import lombok.*;
 @Builder
 public class CreateEmployeeRequest {
 
-    // TODO - Remove, Server should generate the ID, we will remove it once we know how to generate the ID's
-    // Client shouldn't pass it
-    private Integer id;
+//    // TODO - Remove, Server should generate the ID, we will remove it once we know how to generate the ID's
+//    // Client shouldn't pass it
+//    private Integer id;
 
     @NotEmpty
     private String name;
@@ -29,7 +29,6 @@ public class CreateEmployeeRequest {
 
     public Employee toEmployee() {
         return Employee.builder().
-                id(this.id).
                 name(this.name).
                 address(this.address).
                 age(this.age).build();
