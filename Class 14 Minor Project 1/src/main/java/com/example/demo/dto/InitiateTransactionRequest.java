@@ -13,10 +13,10 @@ import lombok.*;
 public class InitiateTransactionRequest {
 
     @NotNull
-    private Integer studentId;
+    private String studentRollNumber;
 
     @NotNull
-    private Book bookId;
+    private Integer bookId;
 
     @NotNull
     private Integer adminId;

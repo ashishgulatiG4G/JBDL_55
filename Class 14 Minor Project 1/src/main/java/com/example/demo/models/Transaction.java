@@ -3,7 +3,6 @@ package com.example.demo.models;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import java.util.Date;
 
@@ -42,6 +41,25 @@ public class Transaction {
     @JoinColumn
     @ManyToOne
     private Admin admin;
+
+//    public Transaction(final String transactionId, final TransactionType transactionType, final TransactionStatus transactionStatus, final Book book, final Student student, final Admin admin) {
+//        this.transactionId = transactionId;
+//        this.transactionType = transactionType;
+//        this.transactionStatus = transactionStatus;
+//        this.book = book;
+//        this.student = student;
+//        this.admin = admin;
+//    }
+//
+//    public Transaction(final String transactionId, final TransactionType transactionType, final TransactionStatus transactionStatus, final Integer fine, final Book book, final Student student, final Admin admin) {
+//        this.transactionId = transactionId;
+//        this.transactionType = transactionType;
+//        this.transactionStatus = transactionStatus;
+//        this.book = book;
+//        this.fine = fine;
+//        this.student = student;
+//        this.admin = admin;
+//    }
 
 
 

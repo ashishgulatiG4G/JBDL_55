@@ -1,8 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.CreateAdminRequest;
 import com.example.demo.dto.CreateBookRequest;
-import com.example.demo.dto.SearchBookRequest;
+import com.example.demo.dto.SearchRequest;
 import com.example.demo.models.Book;
 import com.example.demo.service.BookService;
 import jakarta.validation.Valid;
@@ -33,8 +32,8 @@ public class BookController {
 
     //Getting a list of Books
     @GetMapping("/getBooks")
-    public List<Book> getBooks(@RequestBody @Valid SearchBookRequest searchBookRequest) throws Exception {
-        List<Book> list = bookService.findBook(searchBookRequest.getSearchKey(), searchBookRequest.getSearchValue());
+    public List<Book> getBooks(@RequestBody @Valid SearchRequest searchRequest) throws Exception {
+        List<Book> list = bookService.findBook(searchRequest.getSearchKey(), searchRequest.getSearchValue());
         return list;
     }
 

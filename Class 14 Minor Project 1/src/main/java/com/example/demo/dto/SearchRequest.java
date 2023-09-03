@@ -9,7 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class SearchBookRequest {
+public class SearchRequest {
 
 
     // List<String> searchKeys = ["authorName", "Genre"]

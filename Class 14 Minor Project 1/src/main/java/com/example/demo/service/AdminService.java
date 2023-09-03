@@ -16,4 +16,8 @@ public class AdminService {
         adminRepository.save(admin);
     }
 
+    public Admin find(Integer adminId) {
+        return adminRepository.findById(adminId).orElse(null);
+    }
+
 }
