@@ -1,8 +1,8 @@
-package com.den.MySpringSecurityTuts.service.impl;
+package com.example.SpringSecurity.service.impl;
 
-import com.den.MySpringSecurityTuts.model.Product;
-import com.den.MySpringSecurityTuts.repository.ProductRepo;
-import com.den.MySpringSecurityTuts.service.ProductService;
+import com.example.SpringSecurity.model.Product;
+import com.example.SpringSecurity.repository.ProductRepo;
+import com.example.SpringSecurity.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

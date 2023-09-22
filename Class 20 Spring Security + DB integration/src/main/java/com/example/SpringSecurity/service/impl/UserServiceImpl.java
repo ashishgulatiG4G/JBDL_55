@@ -1,8 +1,8 @@
-package com.den.MySpringSecurityTuts.service.impl;
+package com.example.SpringSecurity.service.impl;
 
-import com.den.MySpringSecurityTuts.model.User;
-import com.den.MySpringSecurityTuts.repository.UserRepo;
-import com.den.MySpringSecurityTuts.service.UserService;
+import com.example.SpringSecurity.model.User;
+import com.example.SpringSecurity.repository.UserRepo;
+import com.example.SpringSecurity.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.den.MySpringSecurityTuts.model;
+package com.example.SpringSecurity.model;
 
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;

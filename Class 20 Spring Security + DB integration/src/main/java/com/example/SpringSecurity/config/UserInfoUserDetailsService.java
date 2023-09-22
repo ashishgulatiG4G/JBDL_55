@@ -1,7 +1,7 @@
-package com.den.MySpringSecurityTuts.config;
+package com.example.SpringSecurity.config;
 
-import com.den.MySpringSecurityTuts.model.User;
-import com.den.MySpringSecurityTuts.service.UserService;
+import com.example.SpringSecurity.model.User;
+import com.example.SpringSecurity.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,4 +1,4 @@
-package com.den.MySpringSecurityTuts;
+package com.example.SpringSecurity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,7 +1,7 @@
-package com.den.MySpringSecurityTuts.controller;
+package com.example.SpringSecurity.controller;
 
-import com.den.MySpringSecurityTuts.model.User;
-import com.den.MySpringSecurityTuts.service.UserService;
+import com.example.SpringSecurity.model.User;
+import com.example.SpringSecurity.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

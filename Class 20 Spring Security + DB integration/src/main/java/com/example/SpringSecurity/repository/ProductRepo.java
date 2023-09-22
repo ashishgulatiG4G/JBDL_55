@@ -1,8 +1,7 @@
-package com.den.MySpringSecurityTuts.repository;
+package com.example.SpringSecurity.repository;
 
-import com.den.MySpringSecurityTuts.model.Product;
+import com.example.SpringSecurity.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 
 import java.util.Optional;
 

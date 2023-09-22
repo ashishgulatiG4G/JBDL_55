@@ -1,6 +1,6 @@
-package com.den.MySpringSecurityTuts.service;
+package com.example.SpringSecurity.service;
 
-import com.den.MySpringSecurityTuts.model.User;
+import com.example.SpringSecurity.model.User;
 
 import java.util.List;
 import java.util.Optional;

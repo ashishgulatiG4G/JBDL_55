@@ -1,6 +1,6 @@
-package com.den.MySpringSecurityTuts.config;
+package com.example.SpringSecurity.config;
 
-import com.den.MySpringSecurityTuts.model.User;
+import com.example.SpringSecurity.model.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
