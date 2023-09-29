@@ -1,0 +1,14 @@
+
+Association / relationship
+
+In JPA world, we can have two ways to represent this relationship
+
+    1. Unidirectional association ->
+        -> More workaround required to navigate between related classes, its faster
+
+    2. Bidirectional association ->
+        - It makes navigation easier, but will be slower compared to unidirectional
+
+@JoinColumn -> Specifies the foreign key column
+
+mappedBy -> Specifies the name of attribute in relationship owner entity

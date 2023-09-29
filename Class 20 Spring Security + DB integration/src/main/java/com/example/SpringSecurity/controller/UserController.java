@@ -26,8 +26,7 @@ public class UserController {
     public Optional<User> findUserByName(@PathVariable String name){
         return userService.findUserByName(name);
     }
-    @PostMapping("/save")
-    //@PreAuthorize("hasAuthority('ADMIN')")            /**Might want to restrict creation of users to ADMIN but as of now we don't have a UI for signup*/
+    @PostMapping("/save")     /* signup*/
     public String saveUser(@RequestBody User user){
         return userService.saveUser(user);
     }
