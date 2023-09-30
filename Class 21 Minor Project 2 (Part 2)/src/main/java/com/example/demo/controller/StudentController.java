@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.dto.CreateStudentRequest;
 import com.example.demo.dto.SearchRequest;
 import com.example.demo.models.Book;
+import com.example.demo.models.SecuredUser;
 import com.example.demo.models.Student;
 import com.example.demo.repository.StudentRepository;
 import com.example.demo.util.Constants;
@@ -10,6 +11,8 @@ import com.example.demo.service.StudentService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -44,9 +47,13 @@ public class StudentController {
 
     //findStudentByName
 
-
-    //Only for student to view their information
-//
+    @GetMapping("/profile")
+    public Student findStudent() throws Exception {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        SecuredUser user = (SecuredUser) authentication.getPrincipal();
+        Integer studentId = user.getStudent().getId();
+        return studentService.find(studentId);
+    }
 
     @GetMapping("/getInfo")
     public Student findStudent(@RequestBody @Valid SearchRequest searchRequest) throws Exception {

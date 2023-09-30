@@ -1,7 +1,6 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.CreateAdminRequest;
-import com.example.demo.models.Admin;
 import com.example.demo.service.AdminService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

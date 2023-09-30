@@ -26,6 +26,7 @@ public class CreateStudentRequest {
     @NotBlank
     private String username;
 
+    @NotBlank
     private String rollNumber;
 
     @NotBlank
@@ -41,6 +42,7 @@ public class CreateStudentRequest {
                 .name(this.name)
                 .age(this.age)
                 .securedUser(securedUser)
+                .rollNumber(this.rollNumber)
                 .email(this.email)
                 .build();
     }

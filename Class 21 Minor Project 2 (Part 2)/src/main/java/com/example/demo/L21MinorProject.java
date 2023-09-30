@@ -20,17 +20,15 @@ public class L21MinorProject implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Admin admin = Admin.builder().
-				name("admin").
-				email("admin@gmail.com").
-				securedUser(SecuredUser.builder().
-						username("admin").
-						password("password").
-						build()).
-				build();
-
-		adminService.createAdmin(admin);
-
-
+//		Admin admin = Admin.builder().
+//				name("admin").
+//				email("admin@gmail.com").
+//				securedUser(SecuredUser.builder().
+//						username("admin").
+//						password("password").
+//						build()).
+//				build();
+//
+//		adminService.createAdmin(admin);
 	}
 }

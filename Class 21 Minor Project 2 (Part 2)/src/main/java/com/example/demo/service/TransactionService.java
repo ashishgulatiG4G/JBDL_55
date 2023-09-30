@@ -33,10 +33,10 @@ public class TransactionService {
     @Value("${student.allowed.duration}") // application.properties
     Integer allowedDuration;
 
-    public String initiateTransaction(InitiateTransactionRequest initiateTransactionRequest) throws Exception {
+    public String initiateTransaction(InitiateTransactionRequest initiateTransactionRequest, Integer adminId) throws Exception {
         return initiateTransactionRequest.getTransactionType() == TransactionType.RETURN
-                ? returnBook(initiateTransactionRequest)
-                : issueBook(initiateTransactionRequest);
+                ? returnBook(initiateTransactionRequest, adminId)
+                : issueBook(initiateTransactionRequest, adminId);
 
     }
 
@@ -48,14 +48,14 @@ public class TransactionService {
      *      4. Entry in the transaction
      *      5. Book to be assigned to a student => update Student column in the book table
      */
-    private String issueBook(InitiateTransactionRequest initiateTransactionRequest) throws Exception {
+    private String issueBook(InitiateTransactionRequest initiateTransactionRequest, Integer adminId) throws Exception {
         List<Student> studentList = studentService.findStudent("rollNumber", initiateTransactionRequest.getStudentRollNumber());
         Student student = studentList.size() > 0 ? studentList.get(0) : null;
 
         List<Book> bookList = bookService.findBook("id", String.valueOf(initiateTransactionRequest.getBookId()));
         Book book = bookList.size() > 0 ? bookList.get(0) : null;
 
-        Admin admin = adminService.find(initiateTransactionRequest.getAdminId());
+        Admin admin = adminService.find(adminId);
 
         // 1. Validate the request
         if(student == null || book == null || admin == null) {
@@ -107,14 +107,14 @@ public class TransactionService {
      * 4. Due date check, if due date - issue date > allowedDuration => fine calculation
      * 5. If there is no fine, de-allocate the book from student's name ===> book table
      */
-    private String returnBook(InitiateTransactionRequest initiateTransactionRequest) throws Exception {
+    private String returnBook(InitiateTransactionRequest initiateTransactionRequest, Integer adminId) throws Exception {
         List<Student> studentList = studentService.findStudent("rollNumber", initiateTransactionRequest.getStudentRollNumber());
         Student student = studentList.size() > 0 ? studentList.get(0) : null;
 
         List<Book> bookList = bookService.findBook("id", String.valueOf(initiateTransactionRequest.getBookId()));
         Book book = bookList.size() > 0 ? bookList.get(0) : null;
 
-        Admin admin = adminService.find(initiateTransactionRequest.getAdminId());
+        Admin admin = adminService.find(adminId);
 
         // 1. Validate the request
         if(student == null || book == null || admin == null) {

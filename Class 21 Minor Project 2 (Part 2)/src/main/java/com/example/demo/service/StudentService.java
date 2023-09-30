@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.models.SecuredUser;
 import com.example.demo.models.Student;
+import com.example.demo.repository.StudentCacheRepository;
 import com.example.demo.repository.StudentRepository;
 import com.example.demo.util.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,9 @@ public class StudentService {
 
     @Autowired
     StudentRepository studentRepository;
+
+    @Autowired
+    StudentCacheRepository studentCacheRepository;
 
     @Autowired
     UserService userService;
@@ -52,7 +56,21 @@ public class StudentService {
         }
     }
 
+    public Student find(Integer studentId) {
+        Student student = studentCacheRepository.get(studentId);
+        if(student != null) {
+            return student;
+        }
+
+        student = studentRepository.findById(studentId).orElse(null);
+        if(student != null) {
+            studentCacheRepository.set(student);
+        }
+        return student;
+    }
 
 
+    // check cache -> if data is present in cache -> return it
+//                        get it from db -> add it to cache and return it
 
 }

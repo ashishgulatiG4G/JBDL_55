@@ -19,9 +19,6 @@ public class InitiateTransactionRequest {
     private Integer bookId;
 
     @NotNull
-    private Integer adminId;
-
-    @NotNull
     private TransactionType transactionType;
 
 }

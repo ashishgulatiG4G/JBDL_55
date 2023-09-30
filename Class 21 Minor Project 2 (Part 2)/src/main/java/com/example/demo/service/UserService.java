@@ -10,6 +10,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import static com.example.demo.util.Constants.INVALID_USER_TYPE;
+
 @Configuration
 public class UserService implements UserDetailsService {
 
@@ -28,6 +30,9 @@ public class UserService implements UserDetailsService {
     public SecuredUser save(SecuredUser securedUser, String userType) {
         String encryptedPassword = passwordEncoder.encode(securedUser.getPassword());
         String authorities = authoritiesListProvider.getAuthorities(userType);
+        if(authorities.equals(INVALID_USER_TYPE)) {
+            return new SecuredUser();
+        }
 
         securedUser.setAuthorities(authorities);
         securedUser.setPassword(encryptedPassword);
