@@ -37,11 +37,11 @@ public class Student implements Serializable{
     @UpdateTimestamp
     private Date updatedOn;
 
-    @OneToMany(mappedBy = "student")
+    @OneToMany(mappedBy = "student", fetch = FetchType.EAGER)
     @JsonIgnoreProperties("securedUser")
     private List<Book> bookList;
 
-    @OneToMany(mappedBy = "student")
+    @OneToMany(mappedBy = "student", fetch = FetchType.EAGER)
     @JsonIgnoreProperties("securedUser")
     private List<Transaction> transactionList;
 
